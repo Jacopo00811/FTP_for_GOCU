@@ -1,48 +1,71 @@
 import os
+import hashlib
 from pyftpdlib.authorizers import DummyAuthorizer
 from pyftpdlib.handlers import FTPHandler
 from pyftpdlib.servers import FTPServer
 
+class MyFTPHandler(FTPHandler):
+    def pre_process_command(self, line, cmd, arg):
+        # Override pre_process_command to handle the MD5 command
+        if cmd.upper() == 'MD5':
+            self.ftp_MD5(arg)
+            return
 
-def run_ftp_server():
-    # Instantiate a dummy authorizer for managing 'virtual' users
-    authorizer = DummyAuthorizer()
+        # Call the parent class method for other commands
+        super().pre_process_command(line, cmd, arg)
 
-    # Define a new user having full r/w permissions and a read-only anonymous user (maybe not needed)
-    authorizer.add_user('Jacopo', 'pippetto', '.', perm='elradfmwMT')
-    authorizer.add_anonymous(os.getcwd())
+    def ftp_MD5(self, arg):
+        splitted = arg.split(' ')
+        received_md5_checksum, last_file_name = splitted[0], splitted[1]
+        try:
+            with open(last_file_name, 'rb') as f:
+                file_content = f.read()
+            md5_checksum = hashlib.sha256(file_content).hexdigest()
 
-    # Instantiate FTP handler class
-    handler = FTPHandler
-    handler.authorizer = authorizer
+            # Calculate MD5 checksum of the received file content
+            if md5_checksum == received_md5_checksum:
+                self.respond_w_warning("250 MD5 checksum matched. File received correctly.")
+                print("\nThe checksums match!\n")              
+            else:
+                self.respond_w_warning("550 MD5 checksum mismatch. File may be corrupted.")
+                print("\nThe checksums do not match!\n")                
+                os.remove(last_file_name)  # Remove the corrupted file
+        except Exception as e:
+            self.respond_w_warning("550 Error handling MD5 command: {}".format(e))
 
-    # Define a customized banner (string returned when client connects)
-    handler.banner = "Hi there! Welcome to Jacopo's FTP server"
-    
-    # Specify a masquerade address and the range of ports to use for passive connections. Decomment in case you're behind a NAT
-    # handler.masquerade_address = '151.25.42.11'
-    # handler.passive_ports = range(60000, 65535)
 
-    # Instantiate FTP server class and listen on 172.20.10.2:2121
-    address = ('172.20.10.2', 2121)
-    server = FTPServer(address, handler)
+class MyFTP_Server:
+    def __init__(self, address, port):
+        self.address = address
+        self.port = port
+        self.authorizer = DummyAuthorizer()
+        self.handler = MyFTPHandler
+        self.server = None
 
-    # set a limit for connections
-    server.max_cons = 256
-    server.max_cons_per_ip = 5
+    def run_server(self):
+        try:
+            self.authorizer.add_user('Jacopo', 'pippetto', '.', perm='elradfmwMT')
+            self.authorizer.add_anonymous(os.getcwd())
 
-    try:
-        # start ftp server
-        while server_running:
-            server.serve_forever(timeout=1, handle_exit=True)  # Check for server_running flag every second
-    except KeyboardInterrupt:
-        print("Ctrl+C detected. Shutting down the FTP server.")
-        server.close_all()
+            self.handler.authorizer = self.authorizer
+            self.handler.banner = "Hi there! Welcome to Jacopo's FTP server"
+
+            self.server = FTPServer((self.address, self.port), self.handler)
+
+            # set a limit for connections
+            self.server.max_cons = 256
+            self.server.max_cons_per_ip = 5
+
+            print(f"Starting FTP server on {self.address}:{self.port}")
+            self.server.serve_forever()
+        except KeyboardInterrupt:
+            print("Ctrl+C detected. Shutting down the FTP server.")
+            if self.server:
+                self.server.close_all()
 
 def main():
-    global server_running
-    server_running = True
-    run_ftp_server()
+    ftp_server = MyFTP_Server('172.20.10.2', 2121)
+    ftp_server.run_server()
 
 if __name__ == '__main__':
     main()
