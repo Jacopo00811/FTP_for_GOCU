@@ -1,0 +1,22 @@
+Data&ora; Inizio/Fine; Descrizione Evento; Guida Operatore 	
+5/1/2024 15:49	54;I;loop porte aperto;void
+5/1/2024 15:49	56;I;blocco porte assente;void
+5/1/2024 15:49	64;I;DDS 1 - indebita apertura porte;void
+5/1/2024 15:51	73;I;veicolo fermo;void
+5/1/2024 15:51	85;I;coda treno locale disattivata;void
+5/1/2024 15:51	92;I;banco disabilitato;void
+5/1/2024 15:51	98;I;Stato consensi --> 0: consensi assenti;void
+5/1/2024 15:51	54;I;loop porte aperto;void
+5/1/2024 15:51	12;I;*** TRAZIONE INIBITA ***;void
+5/1/2024 15:51	36;I;banco abilitato;void
+5/1/2024 15:51	42;I;attivazione LAT da banco;void
+5/1/2024 15:51	11;I;test OMO in corso;void
+5/1/2024 15:51	29;I;esito Test OMO: POSITIVO;void
+5/1/2024 15:51	36;I;loop porte chiuso;void
+5/1/2024 15:51	50;I;loop porte aperto;void
+5/1/2024 15:51	47;I;loop porte chiuso;void
+5/1/2024 15:51	53;I;blocco porte presente;void
+5/1/2024 15:51	59;I;*** TRAZIONE ABILITATA ***;void
+5/1/2024 15:51	10;I;loop porte aperto;void
+5/1/2024 15:51	16;I;blocco porte assente;void
+5/1/2024 15:51	23;I;DDS 1 - indebita apertura porte;void

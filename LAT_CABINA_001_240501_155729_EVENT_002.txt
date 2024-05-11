@@ -1,0 +1,85 @@
+Data&ora; Inizio/Fine; Descrizione Evento; Guida Operatore 	
+5/1/2024 15:57	43;I;Stato consensi --> 1: consenso DX presente;void
+5/1/2024 15:57	78;I;chiusura porte da pulsante di banco;void
+5/1/2024 15:57	26;I;Stato consensi --> 0: consensi assenti;void
+5/1/2024 15:57	94;I;disattivazione LAT da pulsante di banco;void
+5/1/2024 15:57	82;I;Stato consensi --> 3: consensi presenti;void
+5/1/2024 15:57	89;I;*** TRAZIONE ABILITATA ***;void
+5/1/2024 15:57	76;I;attivazione LAT da banco;void
+5/1/2024 15:57	95;I;test OMO in corso;void
+5/1/2024 15:57	21;I;esito Test OMO: POSITIVO;void
+5/1/2024 15:57	27;I;loop porte chiuso;void
+5/1/2024 15:57	36;I;loop porte aperto;void
+5/1/2024 15:57	59;I;*** TRAZIONE INIBITA ***;void
+5/1/2024 15:58	16;I;chiusura porte da pulsante di banco;void
+5/1/2024 15:58	20;I;Stato consensi --> 0: consensi assenti;void
+5/1/2024 15:58	77;I;loop porte chiuso;void
+5/1/2024 15:58	84;I;blocco porte presente;void
+5/1/2024 15:58	90;I;*** TRAZIONE ABILITATA ***;void
+5/1/2024 15:58	55;I;loop porte aperto;void
+5/1/2024 15:58	61;I;blocco porte assente;void
+5/1/2024 15:58	68;I;DDS 1 - indebita apertura porte;void
+5/1/2024 15:58	32;I;loop porte chiuso;void
+5/1/2024 15:58	38;I;blocco porte presente;void
+5/1/2024 15:58	42;I;consenso DX da pulsante di banco;void
+5/1/2024 15:58	27;I;Stato consensi --> 1: consenso DX presente;void
+5/1/2024 15:58	99;I;blocco porte assente;void
+5/1/2024 15:58	17;I;*** TRAZIONE INIBITA ***;void
+5/1/2024 16:00	81;I;veicolo fermo;void
+5/1/2024 16:00	93;I;coda treno locale disattivata;void
+5/1/2024 16:00	19;I;banco disabilitato;void
+5/1/2024 16:00	73;I;Stato consensi --> 0: consensi assenti;void
+5/1/2024 16:00	15;I;loop porte aperto;void
+5/1/2024 16:00	22;I;*** TRAZIONE INIBITA ***;void
+5/1/2024 16:00	84;I;banco abilitato;void
+5/1/2024 16:00	91;I;attivazione LAT da banco;void
+5/1/2024 16:00	62;I;test OMO in corso;void
+5/1/2024 16:00	99;I;esito Test OMO: NEGATIVO;void
+5/1/2024 16:00	20;I;loop porte chiuso;void
+5/1/2024 16:00	27;I;blocco porte presente;void
+5/1/2024 16:00	34;I;*** TRAZIONE ABILITATA ***;void
+5/1/2024 16:00	49;I;consenso DX da pulsante di banco;void
+5/1/2024 16:00	95;I;Stato consensi --> 1: consenso DX presente;void
+5/1/2024 16:00	16;I;blocco porte assente;void
+5/1/2024 16:00	23;I;*** TRAZIONE INIBITA ***;void
+5/1/2024 16:00	82;I;chiusura porte da pulsante di banco;void
+5/1/2024 16:00	24;I;Stato consensi --> 0: consensi assenti;void
+5/1/2024 16:00	10;I;blocco porte presente;void
+5/1/2024 16:00	18;I;*** TRAZIONE ABILITATA ***;void
+5/1/2024 16:01	50;I;consenso SX da pulsante di banco;void
+5/1/2024 16:01	11;I;Stato consensi --> 2: consenso SX presente;void
+5/1/2024 16:01	20;I;blocco porte assente;void
+5/1/2024 16:01	28;I;*** TRAZIONE INIBITA ***;void
+5/1/2024 16:01	98;I;loop porte aperto;void
+5/1/2024 16:01	36;I;loop porte chiuso;void
+5/1/2024 16:01	71;I;chiusura porte da pulsante di banco;void
+5/1/2024 16:01	91;I;Stato consensi --> 0: consensi assenti;void
+5/1/2024 16:01	51;I;blocco porte presente;void
+5/1/2024 16:01	85;I;*** TRAZIONE ABILITATA ***;void
+5/1/2024 16:01	95;I;disattivazione LAT da pulsante di banco;void
+5/1/2024 16:01	86;I;Stato consensi --> 3: consensi presenti;void
+5/1/2024 16:01	96;I;blocco porte assente;void
+5/1/2024 16:01	12;I;esito Test OMO: POSITIVO;void
+5/1/2024 16:01	20;I;Stato consensi --> 0: consensi assenti;void
+5/1/2024 16:01	29;I;attivazione LAT da banco;void
+5/1/2024 16:01	65;I;loop porte aperto;void
+5/1/2024 16:01	74;I;loop porte chiuso;void
+5/1/2024 16:01	82;I;blocco porte presente;void
+5/1/2024 16:01	88;I;banco disabilitato;void
+5/1/2024 16:01	98;I;blocco porte assente;void
+5/1/2024 16:01	70;I;*** TRAZIONE INIBITA ***;void
+5/1/2024 16:01	81;I;loop porte aperto;void
+5/1/2024 16:01	62;I;banco abilitato;void
+5/1/2024 16:01	71;I;attivazione LAT da banco;void
+5/1/2024 16:01	47;I;test OMO in corso;void
+5/1/2024 16:01	76;I;esito Test OMO: POSITIVO;void
+5/1/2024 16:01	83;I;loop porte chiuso;void
+5/1/2024 16:01	30;I;loop porte aperto;void
+5/1/2024 16:01	33;I;loop porte chiuso;void
+5/1/2024 16:01	40;I;blocco porte presente;void
+5/1/2024 16:01	46;I;*** TRAZIONE ABILITATA ***;void
+5/1/2024 16:01	20;I;loop porte aperto;void
+5/1/2024 16:01	27;I;blocco porte assente;void
+5/1/2024 16:01	34;I;DDS 1 - indebita apertura porte;void
+5/1/2024 16:01	69;I;loop porte chiuso;void
+5/1/2024 16:01	75;I;blocco porte presente;void
