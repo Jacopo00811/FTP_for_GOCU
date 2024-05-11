@@ -1,4 +1,4 @@
-# FTP_for_GOCU_Trenitalia
+# FTP_for_GOCU
 
 ## Overview
 
